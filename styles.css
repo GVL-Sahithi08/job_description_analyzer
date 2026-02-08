@@ -1,0 +1,203 @@
+/* ===== GLOBAL DARK THEME ===== */
+html, body, [data-testid="stApp"] {
+    background: #0f172a !important; /* deep navy */
+    color: #e2e8f0 !important;      /* light gray text */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove Streamlit white background */
+[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"] {
+    background: transparent !important;
+}
+[data-testid="stMain"] {
+    background: transparent !important;
+}
+.block-container {
+    padding: 1.5rem !important;
+    background: transparent !important;
+}
+/* ===== RESET HEADING SPACING ===== */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.5rem !important;   /* reduce top gap */
+    margin-bottom: 0.75rem !important; /* reduce bottom gap */
+    line-height: 1.2 !important;     /* tighter line spacing */
+}
+
+/* Optional: specific to section headings */
+.section h1 {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+}
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-btn {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-btn::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: #38bdf8;
+    transition: width 0.3s ease;
+}
+.nav-btn:hover::after {
+    width: 100%;
+}
+
+/* ===== SECTIONS / CARDS ===== */
+.section {
+    max-width: 1100px;
+    margin: 100px auto 40px auto;
+    padding: 32px;
+    border-radius: 14px;
+    background: rgba(30, 41, 59, 0.85);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+/* ===== HEADINGS ===== */
+.section h1 {
+    font-size: 36px;
+    color: #38bdf8;
+    margin-bottom: 16px;
+}
+.section p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+.custom-h1 {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    font-size: 42px;
+    color: #38bdf8;
+}
+
+.custom-h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 28px;
+    color: #38bdf8;
+}
+
+.custom-h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 22px;
+    color: #38bdf8;
+}
+
+/* ===== INPUTS ===== */
+textarea, input {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+    border-radius: 10px !important;
+    border: 1px solid #334155 !important;
+    padding: 10px !important;
+}
+textarea:focus, input:focus {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.6);
+}
+
+/* ===== CHART CARDS ===== */
+.chart-card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* ===== BUTTONS ===== */
+button {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
+    color: #0f172a !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 8px 14px !important;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8) !important;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+/* ===== REMOVE STREAMLIT WRAPPER SPACING ===== */
+.stMarkdown {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove spacing around block containers */
+.block-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* Tighten spacing between sections */
+.section {
+    margin: 40px auto 20px auto !important; /* smaller gaps */
+    padding: 24px !important;
+}
+
+/* ===== LISTS ===== */
+ul { padding-left: 18px; }
+li { margin-bottom: 6px; }
+
+/* ===== INFO TEXT ===== */
+.hint {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* ===== CHART CONTAINER ===== */
+.plot-container {
+    border-radius: 12px;
+    overflow: hidden;
+}
+.card {
+    background: rgba(30, 41, 59, 0.9);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.card h3 {
+    color: #38bdf8;
+}
+
+.card p {
+    color: #cbd5e1;
+}
